@@ -1,0 +1,29 @@
+{
+  "extends": "/Users/kobiton/wikimedia/config/default.json",
+  "android": true,
+  "browsertime": {
+    "iterations": 15,
+    "chrome": {
+      "chromedriverPath":
+        "/Users/kobiton/wikimedia/chromedriver/85/chromedriver",
+      "android": {
+        "deviceSerial": "ZY3222N2CZ"
+      },
+      "args": [
+        "MAP *:80 127.0.0.1:8085,MAP *:443 127.0.0.1:8086,EXCLUDE localhost",
+        "ignore-certificate-errors-spki-list=PhrPvGIaAMmd29hj8BCZOq096yj7uMpRNHpn5PDxI6I=",
+        "user-data-dir=/data/local/tmp/chrome/"
+      ]
+    },
+    "firefox": {
+      "preference": [
+        "network.dns.forceResolve:127.0.0.1",
+        "security.OCSP.enabled:0"
+      ]
+    },
+    "connectivity": {
+      "alias": "4g-replay"
+    }
+  },
+  "androidRooted": true
+}

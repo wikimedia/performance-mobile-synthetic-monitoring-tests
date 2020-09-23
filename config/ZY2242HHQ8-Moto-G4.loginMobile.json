@@ -1,0 +1,9 @@
+{
+  "extends": "/Users/kobiton/wikimedia/mobile-performance-synthetic-monitoring-tests/config/ZY2242HHQ8-Moto-G4.json",
+  "browsertime": {
+    "iterations": 3
+  },
+  "graphite": {
+    "namespace": "sitespeed_io.mobileLogin"
+  }
+}

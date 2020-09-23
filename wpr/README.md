@@ -1,0 +1,2 @@
+The cert/key files are [copies from the WebPageReplay Catapult project](https://github.com/catapult-project/catapult/tree/master/web_page_replay_go). You can generate/regenerate your own 
+following guides in https://chromium.googlesource.com/catapult/+/HEAD/web_page_replay_go/README.md.

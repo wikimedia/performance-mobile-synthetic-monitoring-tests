@@ -1,0 +1,16 @@
+{
+  "extends": "/Users/kobiton/wikimedia/config/default.json",
+  "android": true,
+  "browsertime": {
+    "chrome": {
+      "chromedriverPath":
+        "/Users/kobiton/wikimedia/chromedriver/85/chromedriver",
+      "android": {
+        "deviceSerial": "ZY223LNPVM"
+      }
+    },
+    "connectivity": {
+      "alias": "3g"
+    }
+  }
+}
