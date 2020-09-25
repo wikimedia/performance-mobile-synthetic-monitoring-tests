@@ -1,5 +1,5 @@
 {
-  "extends": "/Users/kobiton/wikimedia/mobile-performance-synthetic-monitoring-tests/config/ZY2242HHQ8-Moto-G4.json",
+  "extends": "/Users/kobiton/wikimedia/performance-mobile-synthetic-monitoring-tests/config/ZY2242HHQ8-Moto-G4.json",
   "browsertime": {
     "iterations": 3
   },
