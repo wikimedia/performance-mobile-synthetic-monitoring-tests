@@ -12,7 +12,7 @@ fi
 BROWSERTIME=sitespeed.io-wpr
 SITESPEEDIO=sitespeed.io
 
-WPR_BINARY=../../wpr
+WPR_BINARY=/Users/kobiton/wikimedia/wpr
 
 # Ports used for mapping the browser to WPR
 HTTP_PORT=80
