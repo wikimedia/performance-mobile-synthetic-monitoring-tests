@@ -3,6 +3,7 @@
   "android": true,
   "browsertime": {
     "iterations": 15,
+    "cpu": true,
     "chrome": {
       "chromedriverPath":
         "/Users/kobiton/wikimedia/chromedriver/85/chromedriver",
