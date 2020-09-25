@@ -2,13 +2,7 @@
   "extends": "/Users/kobiton/wikimedia/config/default.json",
   "android": true,
   "browsertime": {
-    "chrome": {
-      "chromedriverPath":
-        "/Users/kobiton/wikimedia/chromedriver/85/chromedriver",
-      "android": {
-        "deviceSerial": "ZY322HX8RC"
-      }
-    },
+    "browser": "firefox",
     "connectivity": {
       "alias": "4g"
     },
