@@ -11,6 +11,13 @@
     },
     "connectivity": {
       "alias": "4g"
+    },
+    "firefox": {
+      "android": {
+        "deviceSerial": "ZY322HX8RC"
+      },
+      "geckoProfiler": true,
+      "windowRecorder": true
     }
   }
 }
