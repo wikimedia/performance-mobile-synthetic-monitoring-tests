@@ -7,7 +7,8 @@
         "/Users/kobiton/wikimedia/chromedriver/85/chromedriver",
       "android": {
         "deviceSerial": "ZY2242HHQ8"
-      }
+      },
+      "includeResponseBodies": "all"
     },
     "androidRooted": true,
     "androidBatteryTemperatureLimit": 34,
