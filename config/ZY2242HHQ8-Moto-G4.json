@@ -12,7 +12,6 @@
     },
     "androidRooted": true,
     "androidVerifyNetwork": true,
-    "androidBatteryTemperatureLimit": 34,
     "connectivity": {
       "alias": "3g"
     }
