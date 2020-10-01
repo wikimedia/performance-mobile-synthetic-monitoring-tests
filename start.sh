@@ -64,10 +64,10 @@ do
             do
                 DEVICE_SERIAL=$DEVICE_ID ./wpr/wprAndroid.sh $url --config ./config/$1.json
                 control
-                sleep 120
+                sleep 180
             done <"$file"
             control
-            sleep 180
+            sleep 500
         done
     fi
 done
