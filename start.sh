@@ -46,7 +46,7 @@ do
         [[ -f "$POTENTIAL_CONFIG" ]] && CONFIG_FILE="$POTENTIAL_CONFIG" || CONFIG_FILE="./config/$1.json"
         sitespeed.io --config ./$CONFIG_FILE $fileAndPath
         control
-        sleep 60
+        sleep 120
     done
     for scriptAndPath in tests/$1/*.js ; do
         [ -e "$scriptAndPath" ] || continue
@@ -55,7 +55,7 @@ do
         [[ -f "$POTENTIAL_CONFIG" ]] && CONFIG_FILE="$POTENTIAL_CONFIG" || CONFIG_FILE="./config/$1.json"
         sitespeed.io --config ./$CONFIG_FILE $scriptAndPath --multi
         control
-        sleep 60
+        sleep 120
     done
     # At the moment we only run WebPageReplay on one of the phones
     if [ "$DEVICE_ID" = "ZY3222N2CZ" ]; then
