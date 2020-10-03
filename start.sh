@@ -34,12 +34,10 @@ while true
 do
     ## For each iteration, we pull the latest code from git and run
     git pull
-    do
-      source runTheTests.sh "$@"
-      result=$?
-      if [ $result -ne 0 ]; then
-          echo 'Stop the loop $result' 
-          exit 0;
-      fi
-    done
+    source runTheTests.sh "$@"
+    result=$?
+    if [ $result -ne 0 ]; then
+        echo 'Stop the loop $result'
+        exit 0;
+    fi
 done
