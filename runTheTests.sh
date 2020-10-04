@@ -28,9 +28,9 @@ if [ "$DEVICE_ID" = "ZY3222N2CZ" ]; then
         do
             DEVICE_SERIAL=$DEVICE_ID ./wpr/wprAndroid.sh $url --config ./config/$1.json
             control
-            sleep 180
+            sleep 300
         done <"$file"
         control
-        sleep 500
+        sleep 600
     done
 fi
