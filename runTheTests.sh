@@ -3,6 +3,12 @@ LOGFILE=./logs/$1.log
 exec > $LOGFILE 2>&1
 DEVICE_ID=${1%%-*}
 
+function printTemperature() {
+    tempFromPhone=$(adb -s $1 shell dumpsys battery | grep temperature | grep -Eo '[0-9]{1,3}')
+    tempInCelsius=$(echo "scale=1; $tempFromPhone/10" | bc -l )
+    echo "Phone battery temperature $tempInCelsius ($2 sleep)"
+}
+
 for fileAndPath in tests/$1/*.txt ; do
     [ -e "$fileAndPath" ] || continue
     FILENAME=$(basename $fileAndPath)
@@ -10,7 +16,9 @@ for fileAndPath in tests/$1/*.txt ; do
     [[ -f "$POTENTIAL_CONFIG" ]] && CONFIG_FILE="$POTENTIAL_CONFIG" || CONFIG_FILE="./config/$1.json"
     sitespeed.io --config ./$CONFIG_FILE $fileAndPath
     control
+    printTemperature $DEVICE_ID 'before'
     sleep 120
+    printTemperature $DEVICE_ID 'after'
 done
 for scriptAndPath in tests/$1/*.js ; do
     [ -e "$scriptAndPath" ] || continue
@@ -19,7 +27,9 @@ for scriptAndPath in tests/$1/*.js ; do
     [[ -f "$POTENTIAL_CONFIG" ]] && CONFIG_FILE="$POTENTIAL_CONFIG" || CONFIG_FILE="./config/$1.json"
     sitespeed.io --config ./$CONFIG_FILE $scriptAndPath --multi
     control
+    printTemperature $DEVICE_ID 'before'
     sleep 120
+    printTemperature $DEVICE_ID 'after'
 done
 # At the moment we only run WebPageReplay on one of the phones
 if [ "$DEVICE_ID" = "ZY3222N2CZ" ]; then
@@ -31,6 +41,8 @@ if [ "$DEVICE_ID" = "ZY3222N2CZ" ]; then
             sleep 300
         done <"$file"
         control
+        printTemperature $DEVICE_ID 'before'
         sleep 600
+        printTemperature $DEVICE_ID 'after'
     done
 fi
