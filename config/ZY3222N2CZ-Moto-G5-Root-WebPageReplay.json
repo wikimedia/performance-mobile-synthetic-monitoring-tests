@@ -7,7 +7,7 @@
     "cpu": true,
     "chrome": {
       "chromedriverPath":
-        "/Users/kobiton/wikimedia/chromedriver/85/chromedriver",
+        "/Users/kobiton/wikimedia/chromedriver/86/chromedriver",
       "android": {
         "deviceSerial": "ZY3222N2CZ"
       },

@@ -5,7 +5,7 @@
   "browsertime": {
     "chrome": {
       "chromedriverPath":
-        "/Users/kobiton/wikimedia/chromedriver/85/chromedriver",
+        "/Users/kobiton/wikimedia/chromedriver/86/chromedriver",
       "android": {
         "deviceSerial": "ZY2242HJDX"
       },
