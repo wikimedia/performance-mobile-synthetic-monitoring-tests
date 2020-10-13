@@ -42,6 +42,6 @@ fi
 
 for phone in "${PHONES_TO_STOP[@]}"; do
     echo "Wait on test on $phone to stop"
-    while ps axg | grep -vw grep | grep -w "/bin/bash ./start.sh $phone" > /dev/null; do sleep 10; done
+    while ps axg | grep -vw grep | grep -w "/bin/bash ./loop.sh $phone" > /dev/null; do sleep 10; done
     echo "$phone stopped"
 done
