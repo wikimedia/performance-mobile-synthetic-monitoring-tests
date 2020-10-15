@@ -4,6 +4,7 @@
   "browsertime": {
     "iterations": 11,
     "androidBatteryTemperatureWaitTimeInSeconds": 300,
+    "androidBatteryTemperatureReboot": true,
     "cpu": true,
     "chrome": {
       "chromedriverPath":
