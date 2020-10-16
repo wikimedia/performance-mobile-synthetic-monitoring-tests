@@ -24,9 +24,9 @@ WPR_KEY_FILE=./wpr/wpr_key.pem
 WPR_SCRIPTS=./wpr/deterministic.js
 WPR_HTTP_PORT=8085
 WPR_HTTPS_PORT=8086
-WPR_ARCHIVE=./logs/$DEVICE_SERIAL-archive.wprgo
-WPR_RECORD_LOG=./logs/$DEVICE_SERIAL-wpr-record.log
-WPR_REPLAY_LOG=./logs/$DEVICE_SERIAL-wpr-replay.log
+WPR_ARCHIVE=./logs/wpr/$DEVICE_SERIAL-archive.wprgo
+WPR_RECORD_LOG=./logs/wpr/$DEVICE_SERIAL-wpr-record.log
+WPR_REPLAY_LOG=./logs/wpr/$DEVICE_SERIAL-wpr-replay.log
 
 # Parameters used to start WebPageReplay
 WPR_PARAMS="--http_port $WPR_HTTP_PORT --https_port $WPR_HTTPS_PORT --https_cert_file $WPR_CERT_FILE --https_key_file $WPR_KEY_FILE --inject_scripts $WPR_SCRIPTS $WPR_ARCHIVE"
