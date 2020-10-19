@@ -12,7 +12,8 @@
       "android": {
         "deviceSerial": "ZY322HX8RC"
       },
-      "geckoProfiler": true
+      "geckoProfiler": true,
+      "disableBrowsertimeExtension": true
     }
   }
 }
