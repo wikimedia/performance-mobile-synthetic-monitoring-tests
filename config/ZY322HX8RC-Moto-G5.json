@@ -1,9 +1,8 @@
 {
-  "extends": "/Users/kobiton/wikimedia/config/default.json",
   "android": true,
   "androidVerifyNetwork": true,
   "browsertime": {
-    "browser": "firefox",
+    "browser": "chrome",
     "pageCompleteCheckStartWait": 10000,
     "connectivity": {
       "alias": "4g"
