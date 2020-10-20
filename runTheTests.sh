@@ -11,6 +11,7 @@ function printTemperature() {
 
 for fileAndPath in tests/$1/*.txt ; do
     [ -e "$fileAndPath" ] || continue
+    bash ./clearApplications.sh $DEVICE_ID
     FILENAME=$(basename $fileAndPath)
     POTENTIAL_CONFIG="./config/$1.${FILENAME%%.*}.json"
     [[ -f "$POTENTIAL_CONFIG" ]] && CONFIG_FILE="$POTENTIAL_CONFIG" || CONFIG_FILE="./config/$1.json"
@@ -22,6 +23,7 @@ for fileAndPath in tests/$1/*.txt ; do
 done
 for scriptAndPath in tests/$1/*.js ; do
     [ -e "$scriptAndPath" ] || continue
+    bash ./clearApplications.sh $DEVICE_ID
     FILENAME=$(basename $scriptAndPath)
     POTENTIAL_CONFIG="./config/$1.${FILENAME%%.*}.json"
     [[ -f "$POTENTIAL_CONFIG" ]] && CONFIG_FILE="$POTENTIAL_CONFIG" || CONFIG_FILE="./config/$1.json"
@@ -36,6 +38,7 @@ if [ "$DEVICE_ID" = "ZY3222N2CZ" ]; then
     for file in tests/$1/*.wpr ; do
         while IFS= read url
         do
+            bash ./clearApplications.sh $DEVICE_ID
             DEVICE_SERIAL=$DEVICE_ID ./wpr/wprAndroid.sh $url --config ./config/$1.json
             control
             sleep 300
