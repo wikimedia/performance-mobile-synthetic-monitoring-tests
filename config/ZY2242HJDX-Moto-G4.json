@@ -4,6 +4,7 @@
   "androidVerifyNetwork": true,
   "browsertime": {
     "browser": "firefox",
+    "pageCompleteCheckStartWait": 10000,
     "firefox": {
       "android": {
         "deviceSerial": "ZY2242HJDX"
