@@ -3,13 +3,13 @@
   "android": true,
   "androidVerifyNetwork": true,
   "browsertime": {
-    "chrome": {
-      "chromedriverPath":
-        "/Users/kobiton/wikimedia/chromedriver/86/chromedriver",
+    "browser": "firefox",
+    "firefox": {
       "android": {
         "deviceSerial": "ZY2242HJDX"
       },
-      "includeResponseBodies": "all"
+      "geckoProfiler": true,
+      "disableBrowsertimeExtension": true
     },
     "connectivity": {
       "alias": "4g"
