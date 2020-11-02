@@ -9,7 +9,7 @@
       "android": {
         "deviceSerial": "ZY2242HJDX"
       },
-      "geckoProfiler": true,
+      "geckoProfiler": false,
       "disableBrowsertimeExtension": true
     },
     "connectivity": {
