@@ -17,7 +17,8 @@
       "android": {
         "deviceSerial": "ZY2242HJDX"
       },
-      "includeResponseBodies": "all"
+      "includeResponseBodies": "all",
+      "enableTraceScreenshots": true
     },
     "connectivity": {
       "alias": "4g"
