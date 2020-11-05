@@ -24,6 +24,6 @@
       "alias": "4g"
     }
   },
-  "crawler": { "depth": 2, "maxPages": 100 },
-  "name": "Checking total blocking time and number of long tasks."
+  "crawler": { "depth": 2, "maxPages": 200 },
+  "name": "Checking total blocking time and number of long task by crawling enwiki start page."
 }
