@@ -20,6 +20,9 @@
     },
     "connectivity": {
       "alias": "4g"
+    },
+    "videoParams": { 
+      "filmstripQuality": 90
     }
   },
   "crawler": {

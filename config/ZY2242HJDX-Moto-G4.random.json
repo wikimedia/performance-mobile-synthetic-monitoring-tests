@@ -22,6 +22,9 @@
     },
     "connectivity": {
       "alias": "4g"
+    },
+    "videoParams": { 
+      "filmstripQuality": 90
     }
   },
   "name": "Test random pages."
