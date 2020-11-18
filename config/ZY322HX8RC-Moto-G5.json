@@ -9,10 +9,11 @@
       "alias": "4g"
     },
     "firefox": {
+      "geckodriverArgs": ["--marionette-port", 1027],
       "android": {
         "deviceSerial": "ZY322HX8RC"
       },
-      "geckoProfiler": false,
+      "geckoProfiler": true,
       "disableBrowsertimeExtension": true
     }
   }

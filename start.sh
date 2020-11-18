@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PHONES=(ZY3222N2CZ-Moto-G5-Root-WebPageReplay ZY2242HHQ8-Moto-G4 ZY2242HJDX-Moto-G4)
+PHONES=(ZY3222N2CZ-Moto-G5-Root-WebPageReplay ZY2242HHQ8-Moto-G4 ZY2242HJDX-Moto-G4 ZY322HX8RC-Moto-G5)
 
 if [ -z "$1" ]
 then
