@@ -8,8 +8,9 @@
     "connectivity": {
       "alias": "4g"
     },
+    "browserRestartTries": 5,
+    "timeouts": { "browserStart": 120000 },
     "firefox": {
-      "geckodriverArgs": ["--marionette-port", 1027],
       "android": {
         "deviceSerial": "ZY322HX8RC"
       },
