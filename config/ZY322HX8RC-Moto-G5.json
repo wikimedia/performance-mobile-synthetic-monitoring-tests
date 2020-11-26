@@ -15,7 +15,9 @@
         "deviceSerial": "ZY322HX8RC"
       },
       "geckoProfiler": false,
-      "disableBrowsertimeExtension": true
+      "disableBrowsertimeExtension": true,
+      "geckodriverPath":  "/Users/kobiton/wikimedia/geckodriver/0.28.0/geckodriver",
+      "geckodriverArgs": ["--android-storage", "sdcard"]
     }
   }
 }
