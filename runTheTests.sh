@@ -36,16 +36,16 @@ done
 # At the moment we only run WebPageReplay on one of the phones
 if [ "$DEVICE_ID" = "ZY3222N2CZ" ]; then
     for file in tests/$1/*.wpr ; do
-        while IFS= read url
-        do
+        lines=`cat $file`
+        for url in $lines; do
             bash ./clearApplications.sh $DEVICE_ID
             DEVICE_SERIAL=$DEVICE_ID ./wpr/wprAndroid.sh $url --config ./config/$1.json
             control
             sleep 300
-        done <"$file"
-        control
-        printTemperature $DEVICE_ID 'before'
-        sleep 600
-        printTemperature $DEVICE_ID 'after'
+        done
     done
+    control
+    printTemperature $DEVICE_ID 'before'
+    sleep 600
+    printTemperature $DEVICE_ID 'after'
 fi
