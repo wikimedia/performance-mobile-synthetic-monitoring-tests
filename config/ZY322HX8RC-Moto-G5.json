@@ -8,8 +8,8 @@
     "connectivity": {
       "alias": "4g"
     },
-    "browserRestartTries": 5,
-    "timeouts": { "browserStart": 120000 },
+    "browserRestartTries": 10,
+    "timeouts": { "browserStart": 180000 },
     "firefox": {
       "android": {
         "deviceSerial": "ZY322HX8RC"
