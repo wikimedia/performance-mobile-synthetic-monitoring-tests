@@ -1,6 +1,10 @@
 {
   "extends": "/Users/kobiton/wikimedia/config/default.json",
   "android": true,
+  "slug": "android-replay",
+  "graphite": {
+    "addSlugToKey": true
+  },
   "browsertime": {
     "iterations": 11,
     "androidBatteryTemperatureWaitTimeInSeconds": 300,
