@@ -3,7 +3,5 @@
   "browsertime": {
     "iterations": 3
   },
-  "graphite": {
-    "namespace": "sitespeed_io.mobileSecondView"
-  }
+  "slug" : "androidSecondView"
 }

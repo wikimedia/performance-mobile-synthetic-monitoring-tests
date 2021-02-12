@@ -1,7 +1,7 @@
 {
   "extends": "/Users/kobiton/wikimedia/config/default.json",
   "android": true,
-  "slug": "android-replay",
+  "slug": "androidReplay",
   "graphite": {
     "addSlugToKey": true
   },
