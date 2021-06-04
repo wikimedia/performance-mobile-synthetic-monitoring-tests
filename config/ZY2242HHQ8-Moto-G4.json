@@ -13,6 +13,7 @@
     },
     "androidRooted": true,
     "androidVerifyNetwork": true,
+    "androidPretestPowerPress": true,
     "androidBatteryTemperatureReboot": true,
     "connectivity": {
       "alias": "3g"
