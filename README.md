@@ -1,3 +1,2 @@
 # Configuration for synthetic tests on mobile phones.
-TODO: Add more info about the project:
-https://wikitech.wikimedia.org/wiki/Performance/Synthetic_testing/Mobile_phones
+This is the new coming setup for continously run test on BitBar/SmartBear.

@@ -1,8 +1,0 @@
-{
-  "budget": {
-    "cpu": {
-      "totalBlockingTime": 2000,
-      "longTasks": 15
-    }
-  }
-}
