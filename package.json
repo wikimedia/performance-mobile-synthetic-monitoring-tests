@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "test": "eslint ./tests/** ./config/** --ext .json --ext .js",
+    "test": "eslint ./config/** --ext .json --ext .js",
     "lint:fix": "eslint ./tests/** ./config/** --fix --ext .json --ext .js"
   },
   "devDependencies": {
