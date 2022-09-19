@@ -6,11 +6,11 @@
 
 if [ -z "$ANDROID_SERIAL" ]
 then
-    ./install/linux/nodejs.sh
-    ./install/linux/sitespeed.io.sh
-else
     ./install/macos/nodejs.sh
     ./install/macos/sitespeed.io.sh
+else
+    ./install/linux/nodejs.sh
+    ./install/linux/sitespeed.io.sh
 fi
 
 # We use a hack to pass on parameters
