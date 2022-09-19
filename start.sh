@@ -5,7 +5,7 @@ set -eu
 # We always install NodeJs and the dependencies 
 # needed to run sitespeed.io
 
-if -n $ANDROID_SERIAL
+if -z "$ANDROID_SERIAL"
 then
     ./install/linux/nodejs.sh
     ./install/linux/sitespeed.io.sh
