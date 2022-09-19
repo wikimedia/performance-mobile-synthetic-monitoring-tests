@@ -14,6 +14,6 @@ else
 fi
 
 # We use a hack to pass on parameters
-TEST=$CALABASH_PROFILE
+TEST=$1
 
 sitespeed.io --config ./config/$TEST.json ./tests/$test
