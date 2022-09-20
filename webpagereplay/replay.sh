@@ -14,7 +14,7 @@ SITESPEEDIO=sitespeed.io
 WPR_BINARY=./webpagereplay/wpr
 WPR_CERT_FILE=./webpagereplay/wpr_cert.pem
 WPR_KEY_FILE=./webpagereplay/wpr_key.pem
-WPR_SCRIPTS=./webpagereplay/deterministic.js
+WPR_SCRIPTS=./replay/deterministic.js
 WPR_HTTP_PORT=8085
 WPR_HTTPS_PORT=8086
 WPR_ARCHIVE=./archive.wprgo
@@ -32,10 +32,6 @@ then
 fi
 
 DEVICE_SERIAL=${DEVICE_SERIAL:-$FIRST_DEVICE}
-if [ "$DEVICE_SERIAL" == "$FIRST_DEVICE" ]
-then
-    echo "Use DEVICE_SERIAL to choose which phone to use"
-fi
 
 # Reverse the traffic for the android device back to the computer
 adb -s "$DEVICE_SERIAL" reverse tcp:"$WPR_HTTP_PORT" tcp:"$WPR_HTTP_PORT"
