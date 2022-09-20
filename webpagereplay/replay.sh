@@ -2,9 +2,6 @@
 set -eu
 
 ## Script to run your Android device against WebPageReplay
-#$ ANDROID=false ./replay.sh --config desktop.json https://www.sitespeed.io
-#$ ANDROID=true DEVICE_SERIAL=ZY322GXR4B ./replay.sh --config android.json https://www.sitespeed.io
-
 
 # You need to install sitespeed.io globally: npm install sitespeed.io -g
 BROWSERTIME=sitespeed.io-wpr
@@ -21,17 +18,7 @@ WPR_ARCHIVE=./archive.wprgo
 WPR_RECORD_LOG=./wpr-record.log
 WPR_REPLAY_LOG=./wpr-replay.log
 
-
-# Special setup when yoy run on an Android devic
-FIRST_DEVICE=$(adb devices | grep -v "List" | awk 'NR==1{print $1}')
-FIRST_DEVICE=${FIRST_DEVICE:-'no_device'}
-if [ "$FIRST_DEVICE" == "no_device" ]
-then
-    echo "Could not find a phone connected to the computer. Try with adb devices"
-    exit 1
-fi
-
-DEVICE_SERIAL=${DEVICE_SERIAL:-$FIRST_DEVICE}
+DEVICE_SERIAL=$(adb devices | grep -v "List" | awk 'NR==1{print $1}')
 
 # Reverse the traffic for the android device back to the computer
 adb -s "$DEVICE_SERIAL" reverse tcp:"$WPR_HTTP_PORT" tcp:"$WPR_HTTP_PORT"
@@ -39,7 +26,6 @@ adb -s "$DEVICE_SERIAL" reverse tcp:"$WPR_HTTPS_PORT" tcp:"$WPR_HTTPS_PORT"
 
 trap "exit" INT TERM
 trap "adb -s "$DEVICE_SERIAL" reverse --remove-all" EXIT
-
 
 # Parameters used to start WebPageReplay
 WPR_PARAMS="--http_port $WPR_HTTP_PORT --https_port $WPR_HTTPS_PORT --https_cert_file $WPR_CERT_FILE --https_key_file $WPR_KEY_FILE --inject_scripts $WPR_SCRIPTS $WPR_ARCHIVE"
@@ -82,9 +68,11 @@ then
         ps -ef
     else
         echo "Replay server didn't start correctly, check the log $WPR_REPLAY_LOG" >&2
+        cat "$WPR_REPLAY_LOG"
         exit 1
     fi
 else
     echo "Recording or accessing the URL failed, will not replay" >&2
+    cat "$WPR_RECORD_LOG"
     exit 1
 fi
