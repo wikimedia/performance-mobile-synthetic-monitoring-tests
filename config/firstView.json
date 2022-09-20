@@ -1,4 +1,5 @@
 {
+    "extends": "../secrets.json",
     "slug": "moto5g-2-4g",
     "utc": true,
     "gzipHAR": true,
