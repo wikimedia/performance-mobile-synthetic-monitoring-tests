@@ -22,7 +22,7 @@
     "android": true,
     "timeToSettle": 5000,
     "browsertime": {
-      "iterations": 1,
+      "iterations": 7,
       "limitedRunData": true,
       "preWarmServer": true,
       "preWarmServerWaitTime": 10000,
