@@ -1,46 +1,7 @@
 {
-    "extends": "../secrets.json",
+    "extends": "./default.json",
     "slug": "secondView",
-    "utc": true,
-    "gzipHAR": true,
-    "html": {
-      "fetchHARFiles": true,
-      "compareURL": "https://compare.sitespeed.io/"
-    },
-    "screenshot": {
-      "type": "jpg"
-    },
-    "plugins": {
-      "remove": [
-        "thirdparty",
-        "coach"
-      ]
-    },
-    "graphite": {
-      "messages": ["pageSummary", "run"]
-    },
-    "android": true,
-    "timeToSettle": 5000,
     "browsertime": {
-      "preURL": "https://en.m.wikipedia.org/wiki/Main_Page",
-      "iterations": 7,
-      "limitedRunData": true,
-      "preWarmServer": true,
-      "preWarmServerWaitTime": 10000,
-      "visualElements": true,
-      "cacheClearRaw": true,
-      "video": true,
-      "visualMetrics": true,
-      "visualMetricsPortable": true,
-      "androidRooted": true,
-      "chrome": {
-        "traceCategory": ["disabled-by-default-v8.cpu_profiler"],
-        "collectConsoleLog": true,
-        "includeResponseBodies": "all",
-        "enableTraceScreenshots": true,
-        "args": [
-          "disable-features=PaintHoldingCrossOrigin"
-        ]
-      }
+      "preURL": "https://en.m.wikipedia.org/wiki/Main_Page"
     }
   }
