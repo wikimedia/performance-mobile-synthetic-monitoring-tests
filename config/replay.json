@@ -24,7 +24,7 @@
   "timeToSettle": 5000,
   "browsertime": {
     "limitedRunData": true,
-    "iterations": 1,
+    "iterations": 11,
     "video": true,
     "visualMetrics": true,
     "visualElements": true,

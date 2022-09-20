@@ -7,7 +7,7 @@ mv wpr ./webpagereplay/wpr
 # Disable the wifi on the device to make sure we are recording/replaying through the server
 adb shell svc wifi disable
 
-URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama')
+URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikipedia.org/wiki/Main_Page' 'https://en.m.wikipedia.org/wiki/Facebook' 'https://en.m.wikipedia.org/wiki/Sweden')
 
 
 for url in ${URLS[@]}; do
