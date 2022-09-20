@@ -14,6 +14,4 @@ else
 fi
 
 # We use a hack to pass on parameters
-TEST=$1
-
-sitespeed.io --config ./config/$TEST.json ./tests/$test
+./tests/$1.sh
