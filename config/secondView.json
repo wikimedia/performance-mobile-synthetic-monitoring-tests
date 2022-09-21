@@ -1,5 +1,5 @@
 {
-    "extends": "./default.json",
+    "extends": "./config/default.json",
     "slug": "secondView",
     "browsertime": {
       "preURL": "https://en.m.wikipedia.org/wiki/Main_Page",

@@ -1,5 +1,5 @@
 {
-    "extends": "./default.json",
+    "extends": "./config/default.json",
     "slug": "firstView",
     "browsertime": {
     "connectivity": {
