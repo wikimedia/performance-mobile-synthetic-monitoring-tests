@@ -2,6 +2,9 @@
     "extends": "./default.json",
     "slug": "secondView",
     "browsertime": {
-      "preURL": "https://en.m.wikipedia.org/wiki/Main_Page"
+      "preURL": "https://en.m.wikipedia.org/wiki/Main_Page",
+      "connectivity": {
+        "alias": "4g"
+      }
     }
   }
