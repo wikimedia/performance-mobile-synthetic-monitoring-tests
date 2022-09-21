@@ -35,6 +35,7 @@
         "localhost": true
       },
       "profile": "custom",
+      "alias:": "120rtt",
       "rtt": 120
     },
     "chrome": {
