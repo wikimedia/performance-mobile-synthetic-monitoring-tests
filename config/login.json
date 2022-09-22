@@ -1,6 +1,7 @@
 {
     "extends": "./config/default.json",
     "slug": "login",
+    "multi": true,
     "browsertime": {
     "iterations": 3,
     "connectivity": {
