@@ -1,0 +1,10 @@
+{
+    "extends": "./config/default.json",
+    "slug": "login",
+    "browsertime": {
+    "iterations": 3,
+    "connectivity": {
+      "alias": "3g"
+    }
+  }
+}
