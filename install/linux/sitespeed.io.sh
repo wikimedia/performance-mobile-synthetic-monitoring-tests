@@ -5,9 +5,4 @@ apt-get update -y && sudo apt-get install -y imagemagick ffmpeg iproute2 libnss3
 pip install --upgrade pip
 python -m pip install scikit-build pyssim OpenCV-Python Numpy
 
-# At the moment we use the main branch to get the extra run metrics
-git clone https://github.com/sitespeedio/sitespeed.io.git
-cd sitespeed.io
-npm install
-npm install --location=global
-cd ..
+npm install sitespeed.io --location=global
