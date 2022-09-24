@@ -23,6 +23,7 @@
   "replay": true,
   "timeToSettle": 5000,
   "browsertime": {
+    "cpu": true,
     "limitedRunData": true,
     "iterations": 11,
     "video": true,
