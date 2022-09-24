@@ -18,6 +18,7 @@
     "graphite": {
       "messages": ["pageSummary", "run"]
     },
+    "copyLatestFilesToBaseGraphiteNamespace": true,
     "android": true,
     "timeToSettle": 5000,
     "browsertime": {
