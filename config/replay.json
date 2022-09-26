@@ -21,11 +21,11 @@
   },
   "android": true,
   "replay": true,
-  "timeToSettle": 5000,
   "copyLatestFilesToBaseGraphiteNamespace": true,
   "browsertime": {
     "cpu": true,
     "limitedRunData": true,
+    "timeToSettle": 5000,
     "iterations": 11,
     "video": true,
     "visualMetrics": true,
