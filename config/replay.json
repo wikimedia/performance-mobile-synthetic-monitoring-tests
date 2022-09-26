@@ -22,6 +22,7 @@
   "android": true,
   "replay": true,
   "timeToSettle": 5000,
+  "copyLatestFilesToBaseGraphiteNamespace": true,
   "browsertime": {
     "cpu": true,
     "limitedRunData": true,
