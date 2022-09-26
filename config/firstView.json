@@ -1,9 +1,11 @@
 {
     "extends": "./config/default.json",
+
     "slug": "firstView",
     "browsertime": {
     "connectivity": {
       "alias": "4g"
-    }
+    },
+    "androidPretestPressHomeButton": true
   }
 }
