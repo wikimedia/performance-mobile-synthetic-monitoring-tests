@@ -11,7 +11,7 @@ done
 
 # Install Firefox
 # arm64 works fine using A51 and armeabi on Moto G5.
-curl -L https://github.com/mozilla-mobile/fenix/releases/download/v105.1.0/fenix-105.1.0-armeabi-v7a.apk --output firefox.apk
-adb install  -r firefox.apk
+#curl -L https://github.com/mozilla-mobile/fenix/releases/download/v105.1.0/fenix-105.1.0-armeabi-v7a.apk --output firefox.apk
+#adb install  -r firefox.apk
 
-sitespeed.io https://en.m.wikipedia.org/wiki/Barack_Obama --config ./config/firstView.json -b firefox --browsertime.cpu false --browsertime.cacheClearRaw false
+#sitespeed.io https://en.m.wikipedia.org/wiki/Barack_Obama --config ./config/firstView.json -b firefox --browsertime.cpu false --browsertime.cacheClearRaw false
