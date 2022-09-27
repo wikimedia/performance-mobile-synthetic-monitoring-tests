@@ -14,4 +14,5 @@ for url in ${URLS[@]}; do
     ANDROID=true ./webpagereplay/replay.sh --config ./config/replay.json $url -b chrome
     adb shell am force-stop "com.android.chrome"
     adb shell pm clear "com.android.chrome"
+    sleep 120
 done

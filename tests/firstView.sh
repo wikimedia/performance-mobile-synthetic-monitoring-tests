@@ -6,7 +6,7 @@ for url in ${URLS[@]}; do
     sitespeed.io $url --config ./config/firstView.json
     adb shell am force-stop "com.android.chrome"
     adb shell pm clear "com.android.chrome"
-    sleep 10
+    sleep 120
 done
 
 # Install Firefox
