@@ -26,6 +26,7 @@
       "limitedRunData": true,
       "preWarmServer": true,
       "preWarmServerWaitTime": 10000,
+      "timeToSettle": 20000,
       "visualElements": true,
       "cacheClearRaw": true,
       "video": true,
