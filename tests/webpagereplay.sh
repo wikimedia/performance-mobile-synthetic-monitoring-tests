@@ -16,3 +16,8 @@ for url in ${URLS[@]}; do
     adb shell pm clear "com.android.chrome"
     sleep 120
 done
+
+curl -L https://github.com/mozilla-mobile/fenix/releases/download/v105.2.0/fenix-105.2.0-arm64-v8a.apk --output firefox.apk
+adb install  -r firefox.apk
+
+ANDROID=true ./webpagereplay/replay.sh --config ./config/replay.json https://en.m.wikipedia.org/wiki/Barack_Obama -b firefox

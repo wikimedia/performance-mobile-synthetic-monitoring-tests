@@ -59,7 +59,8 @@
         "security.OCSP.enabled:0",
         "network.socket.forcePort:80=8085;443=8086"
       ],
-      "acceptInsecureCerts": true
+      "acceptInsecureCerts": true,
+      "disableBrowsertimeExtension": true
     }
   }
 }
