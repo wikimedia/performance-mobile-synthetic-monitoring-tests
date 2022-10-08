@@ -1,0 +1,16 @@
+{
+    "extends": "./config/default.json",
+
+    "slug": "firstView",
+    "browsertime": {
+    "connectivity": {
+      "alias": "4g"
+    },
+    "cpu": false,
+    "cacheClearRaw": false,
+    "androidPretestPressHomeButton": true,
+    "firefox": {
+      "disableBrowsertimeExtension": true
+    }
+  }
+}
