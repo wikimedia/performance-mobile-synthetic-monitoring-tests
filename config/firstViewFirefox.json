@@ -8,6 +8,7 @@
     },
     "cpu": false,
     "cacheClearRaw": false,
+    "preWarmServer": false,
     "androidPretestPressHomeButton": true,
     "firefox": {
       "disableBrowsertimeExtension": true
