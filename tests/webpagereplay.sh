@@ -20,4 +20,11 @@ done
 curl -L https://github.com/mozilla-mobile/fenix/releases/download/v105.2.0/fenix-105.2.0-arm64-v8a.apk --output firefox.apk
 adb install  -r firefox.apk
 
-ANDROID=true ./webpagereplay/replay.sh --config ./config/replay.json https://en.m.wikipedia.org/wiki/Barack_Obama -b firefox
+FIREFOX_URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikipedia.org/wiki/Main_Page')
+
+for url in ${FIREFOX_URLS[@]}; do
+    ANDROID=true ./webpagereplay/replay.sh --config ./config/replay.json $url -b firefox
+    adb shell am force-stop "org.mozilla.firefox"
+    adb shell pm clear "org.mozilla.firefox"
+    sleep 120
+done
