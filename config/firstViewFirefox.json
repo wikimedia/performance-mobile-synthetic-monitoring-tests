@@ -1,15 +1,34 @@
 {
-    "extends": "./config/default.json",
-
-    "slug": "firstView",
-    "browsertime": {
-    "connectivity": {
-      "alias": "4g"
-    },
-    "cpu": false,
-    "cacheClearRaw": false,
-    "preWarmServer": false,
-    "androidPretestPressHomeButton": true,
+  "extends": "../../secrets.json",
+  "utc": true,
+  "gzipHAR": true,
+  "html": {
+    "fetchHARFiles": true,
+    "compareURL": "https://compare.sitespeed.io/"
+  },
+  "screenshot": {
+    "type": "jpg"
+  },
+  "plugins": {
+    "remove": [
+      "thirdparty",
+      "coach"
+    ]
+  },
+  "graphite": {
+    "messages": ["pageSummary", "run"]
+  },
+  "copyLatestFilesToBaseGraphiteNamespace": true,
+  "android": true,
+  "browsertime": {
+    "cpu": true,
+    "iterations": 3,
+    "timeToSettle": 20000,
+    "visualElements": true,
+    "video": true,
+    "visualMetrics": true,
+    "visualMetricsPortable": true,
+    "androidRooted": true,
     "firefox": {
       "disableBrowsertimeExtension": true
     }
