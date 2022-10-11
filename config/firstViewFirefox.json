@@ -1,6 +1,7 @@
 {
   "extends": "../secrets.json",
   "utc": true,
+  "slug": "firstView",
   "gzipHAR": true,
   "html": {
     "fetchHARFiles": true,
@@ -21,6 +22,9 @@
   "copyLatestFilesToBaseGraphiteNamespace": true,
   "android": true,
   "browsertime": {
+    "connectivity": {
+      "alias": "4g"
+    },
     "cpu": true,
     "iterations": 3,
     "timeToSettle": 20000,
