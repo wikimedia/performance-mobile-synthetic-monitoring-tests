@@ -26,7 +26,7 @@
       "alias": "4g"
     },
     "cpu": true,
-    "iterations": 3,
+    "iterations": 7,
     "timeToSettle": 20000,
     "visualElements": true,
     "video": true,

@@ -14,4 +14,11 @@ done
 curl -L https://github.com/mozilla-mobile/fenix/releases/download/v105.2.0/fenix-105.2.0-armeabi-v7a.apk --output firefox.apk
 adb install  -r firefox.apk
 
-sitespeed.io https://en.m.wikipedia.org/wiki/Barack_Obama --config ./config/firstViewFirefox.json -b firefox
+FIREFOX_URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikipedia.org/wiki/Main_Page')
+
+for url in ${FIREFOX_URLS[@]}; do
+    ssitespeed.io $url --config ./config/firstViewFirefox.json -b firefox
+    adb shell am force-stop "org.mozilla.firefox"
+    adb shell pm clear "org.mozilla.firefox"
+    sleep 120
+done
