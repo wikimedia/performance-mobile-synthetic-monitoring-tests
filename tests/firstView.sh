@@ -17,7 +17,7 @@ adb install  -r firefox.apk
 FIREFOX_URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikipedia.org/wiki/Main_Page')
 
 for url in ${FIREFOX_URLS[@]}; do
-    ssitespeed.io $url --config ./config/firstViewFirefox.json -b firefox
+    sitespeed.io $url --config ./config/firstViewFirefox.json -b firefox
     adb shell am force-stop "org.mozilla.firefox"
     adb shell pm clear "org.mozilla.firefox"
     sleep 120
