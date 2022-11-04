@@ -1,6 +1,6 @@
 {
     "extends": "./config/default.json",
-    "slug": "secondView",
+    "slug": "warmCache",
     "browsertime": {
       "preURL": "https://en.m.wikipedia.org/wiki/Main_Page",
       "connectivity": {
