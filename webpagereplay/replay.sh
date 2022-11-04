@@ -65,7 +65,6 @@ then
         echo "sitespeed.io finished"
         echo "Kill replay process $REPLAY_PID"
         kill -9 $REPLAY_PID
-        ps -ef
     else
         echo "Replay server didn't start correctly, check the log $WPR_REPLAY_LOG" >&2
         cat "$WPR_REPLAY_LOG"
