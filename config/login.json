@@ -1,6 +1,6 @@
 {
     "extends": "./config/default.json",
-    "slug": "login",
+    "slug": "userJourneyLogin",
     "multi": true,
     "browsertime": {
     "iterations": 3,
