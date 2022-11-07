@@ -3,9 +3,10 @@
     "slug": "userJourneyLogin",
     "multi": true,
     "browsertime": {
-    "iterations": 3,
-    "connectivity": {
-      "alias": "3g"
+      "preWarmServer": false,
+      "iterations": 3,
+      "connectivity": {
+        "alias": "3g"
+      }
     }
-  }
 }
