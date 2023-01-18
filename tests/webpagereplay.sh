@@ -24,7 +24,7 @@ FIREFOX_URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikip
 
 
 for url in ${FIREFOX_URLS[@]}; do
-    ANDROID=true ./webpagereplay/replay.sh --config ./config/replay.json $url -b firefox
+    ANDROID=true ./webpagereplay/replay.sh --config ./config/replay.json $url -b firefox --browsertime.iterations 5
     adb shell am force-stop "org.mozilla.firefox"
     adb shell pm clear "org.mozilla.firefox"
     sleep 120
