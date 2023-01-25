@@ -6,7 +6,7 @@
       "preWarmServer": false,
       "iterations": 3,
       "connectivity": {
-        "alias": "3g"
+        "alias": "4g"
       }
     }
 }
