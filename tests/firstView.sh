@@ -9,6 +9,17 @@ for url in ${URLS[@]}; do
     sleep 120
 done
 
+# Temporary tests for https://phabricator.wikimedia.org/T326147
+sitespeed.io https://en.m.wikipedia.org/speed-tests/Cleopatra.enwiki.1139789971/before/ --urlAlias cleopatraBefore --config ./config/firstView.json
+adb shell am force-stop "com.android.chrome"
+adb shell pm clear "com.android.chrome"
+sleep 120
+
+sitespeed.io https://en.m.wikipedia.org/speed-tests/Cleopatra.enwiki.1139789971/after/ --urlAlias cleopatraAfter --config ./config/firstView.json
+adb shell am force-stop "com.android.chrome"
+adb shell pm clear "com.android.chrome"
+sleep 120
+
 # Install Firefox
 # arm64 works fine using A51 and armeabi on Moto G5.
 curl -L https://github.com/mozilla-mobile/fenix/releases/download/v105.2.0/fenix-105.2.0-armeabi-v7a.apk --output firefox.apk
