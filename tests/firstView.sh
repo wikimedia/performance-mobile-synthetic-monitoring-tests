@@ -9,17 +9,6 @@ for url in ${URLS[@]}; do
     sleep 120
 done
 
-# Temporary tests for https://phabricator.wikimedia.org/T326147
-sitespeed.io https://en.m.wikipedia.org/speed-tests/Cleopatra.enwiki.1139789971/before/ --urlAlias cleopatraBefore --config ./config/firstView.json
-adb shell am force-stop "com.android.chrome"
-adb shell pm clear "com.android.chrome"
-sleep 120
-
-sitespeed.io https://en.m.wikipedia.org/speed-tests/Cleopatra.enwiki.1139789971/after/ --urlAlias cleopatraAfter --config ./config/firstView.json
-adb shell am force-stop "com.android.chrome"
-adb shell pm clear "com.android.chrome"
-sleep 120
-
 # No JS experience
 sitespeed.io --block "https://en.m.wikipedia.org/w/load.php?lang=en&modules=startup&only=scripts&raw=1&skin=minerva&target=mobile" https://en.m.wikipedia.org/wiki/Barack_Obama --urlAlias obamaNoJS --config ./config/firstView.json
 adb shell am force-stop "com.android.chrome"
