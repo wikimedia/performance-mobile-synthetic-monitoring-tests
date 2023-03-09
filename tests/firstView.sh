@@ -15,6 +15,19 @@ adb shell am force-stop "com.android.chrome"
 adb shell pm clear "com.android.chrome"
 sleep 120
 
+# Test out "Make languages available to index crawlers in mobile version of article pages"
+sitespeed.io  https://en.m.wikipedia.org/speed-tests/United_States.enwiki.1143629697/after-body/ --urlAlias afterBody --config ./config/firstView.json
+adb shell am force-stop "com.android.chrome"
+adb shell pm clear "com.android.chrome"
+sleep 120
+sitespeed.io  https://en.m.wikipedia.org/speed-tests/United_States.enwiki.1143629697/after-head/ --urlAlias afterHead --config ./config/firstView.json
+adb shell am force-stop "com.android.chrome"
+adb shell pm clear "com.android.chrome"
+sleep 120
+sitespeed.io  https://en.m.wikipedia.org/speed-tests/United_States.enwiki.1143629697/before/ --urlAlias before --config ./config/firstView.json
+adb shell am force-stop "com.android.chrome"
+adb shell pm clear "com.android.chrome"
+sleep 120
 
 
 # Install Firefox
