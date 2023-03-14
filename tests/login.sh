@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sitespeed.io ./tests/userJourneys/login.js --config ./config/login.json
+sitespeed.io ./tests/userJourneys/login.cjs --config ./config/login.json
