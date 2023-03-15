@@ -38,10 +38,7 @@
         "traceCategory": ["disabled-by-default-v8.cpu_profiler"],
         "collectConsoleLog": true,
         "includeResponseBodies": "all",
-        "enableTraceScreenshots": true,
-        "args": [
-          "disable-features=PaintHoldingCrossOrigin"
-        ]
+        "enableTraceScreenshots": true
       }
     }
   }
