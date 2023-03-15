@@ -18,7 +18,7 @@ adb shell svc wifi disable
 FIREFOX_URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikipedia.org/wiki/Main_Page' 'https://en.m.wikipedia.org/wiki/Facebook' 'https://en.m.wikipedia.org/wiki/Sweden')
 
 for url in ${FIREFOX_URLS[@]}; do
-    ANDROID=true ./webpagereplay/replay.sh --config ./config/replay.json $url -b firefox --browsertime.iterations 5
+    ANDROID=true ./webpagereplay/replay.sh --config ./config/replay.json $url -b firefox --browsertime.iterations 5 --browsertime.firefox.android.package org.mozilla.firefox
     adb shell am force-stop "org.mozilla.firefox"
     adb shell pm clear "org.mozilla.firefox"
     sleep 120
