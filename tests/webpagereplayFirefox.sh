@@ -7,6 +7,11 @@ mv wpr ./webpagereplay/wpr
 curl -L https://github.com/mozilla-mobile/firefox-android/releases/download/fenix-v111.0/fenix-111.0-arm64-v8a.apk --output firefox.apk
 adb install  -r firefox.apk
 
+# List installed packages
+adb shell "pm list packages -u -3"
+
+adb shell "am start -n org.mozilla.firefox/org.mozilla.firefox.App"
+
 # Disable the wifi on the device to make sure we are recording/replaying through the server
 adb shell svc wifi disable
 
