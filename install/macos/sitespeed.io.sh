@@ -9,4 +9,4 @@ python3 -m pip install pyssim OpenCV-Python Numpy
 
 brew install imagemagick@6
 
-npm install sitespeed.io@27.0.0-beta.2 --location=global
+npm install sitespeed.io@27.0.0-beta.4 --location=global
