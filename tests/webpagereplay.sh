@@ -17,7 +17,7 @@ for url in ${URLS[@]}; do
     sleep 120
 done
 
-curl -L https://github.com/mozilla-mobile/fenix/releases/download/v108.1.1/fenix-108.1.1-arm64-v8a.apk --output firefox.apk
+curl -L https://github.com/mozilla-mobile/firefox-android/releases/download/fenix-v111.0/fenix-111.0-arm64-v8a.apk --output firefox.apk
 adb install  -r firefox.apk
 
 FIREFOX_URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikipedia.org/wiki/Main_Page' 'https://en.m.wikipedia.org/wiki/Facebook' 'https://en.m.wikipedia.org/wiki/Sweden')
