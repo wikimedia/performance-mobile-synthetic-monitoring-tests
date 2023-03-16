@@ -15,8 +15,6 @@ adb shell am force-stop "com.android.chrome"
 adb shell pm clear "com.android.chrome"
 sleep 120
 
-
-
 # Install Firefox
 # arm64 works fine using A51 and armeabi on Moto G5.
 curl -L https://github.com/mozilla-mobile/firefox-android/releases/download/fenix-v111.0/fenix-111.0-armeabi-v7a.apk --output firefox.apk
