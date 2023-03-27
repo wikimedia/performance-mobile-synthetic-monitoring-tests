@@ -1,6 +1,6 @@
 #!/bin/bash
 
-URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikipedia.org/wiki/Main_Page' 'https://en.m.wikipedia.org/wiki/Facebook' 'https://en.m.wikipedia.org/wiki/Sweden')
+URLS=('https://en.m.wikipedia.org/wiki/Barack_Obama' 'https://en.m.wikipedia.org/wiki/Main_Page' 'https://en.m.wikipedia.org/wiki/Facebook' 'https://en.m.wikipedia.org/wiki/Sweden' 'https://en.m.wikipedia.beta.wmflabs.org/wiki/Barack_Obama')
 
 for url in ${URLS[@]}; do
     sitespeed.io $url --config ./config/firstView.json
