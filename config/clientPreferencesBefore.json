@@ -1,0 +1,12 @@
+{
+    "extends": "./config/default.json",
+    "slug": "userJourneyClientPreferencesBefore",
+    "multi": true,
+    "browsertime": {
+      "preWarmServer": false,
+      "iterations": 3,
+      "connectivity": {
+        "alias": "4g"
+      }
+    }
+}
