@@ -10,14 +10,17 @@
 
 # We use a hack to pass on parameters
 # CALABASH_TAGS and CALABASH_PROFILE
-TYPE_OF_TEST=$1
+# and we sent the type and browser in one
+TYPE_OF_TEST_AND_BROWSER=(${1//;/ })
+TYPE_OF_TEST=${TYPE_OF_TEST_AND_BROWSER[0]}
+BROWSER=${TYPE_OF_TEST_AND_BROWSER[1]}
 FILE_TO_RUN=$2
 
 if [ "$TYPE_OF_TEST" = "webpagereplay" ]; then
     echo "Run WebPageReplay tests for $FILE_TO_RUN"
-    ./webpagereplay.sh $FILE_TO_RUN 
+    ./webpagereplay.sh $FILE_TO_RUN $BROWSER
 else
     echo "Run direct tests for $FILE_TO_RUN"
-    ./direct.sh $FILE_TO_RUN
+    ./direct.sh $FILE_TO_RUN $BROWSER
 fi
 

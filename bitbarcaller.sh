@@ -31,32 +31,34 @@ fi
 # the BitBar API
 for file in tests/$1/*.*; do
     [ -e "$file" ] || continue
-    FILENAME=$(basename -- "$file")
-    BITBAR_CONFIG='{
-    "osType":"ANDROID",
-    "files":[
-        {"id":'$APK_FILE_ID'},
-        {"id":'$RUN_TEST_FILE_ID'}
-    ],
-    "frameworkId":'$FRAMEWORK_ID',
-    "deviceGroupId":'$DEVICE_GROUP_ID',
-    "scheduler":"SINGLE",
-    "projectId": '$PROJECT_ID',
-    "testRunName": "Test running '$FILENAME'",
-    "testRunParameters": [
-        {
-        "key":"CALABASH_TAGS","value":"'$1'"
-        },
-        {
-        "key":"CALABASH_PROFILE","value":"'$file'"
-        }
-        ]
-    }'
+    BROWSERS=(chrome firefox)
+    for browser in "${BROWSERS[@]}" ; do
+        FILENAME=$(basename -- "$file")
+        BITBAR_CONFIG='{
+        "osType":"ANDROID",
+        "files":[
+            {"id":'$APK_FILE_ID'},
+            {"id":'$RUN_TEST_FILE_ID'}
+        ],
+        "frameworkId":'$FRAMEWORK_ID',
+        "deviceGroupId":'$DEVICE_GROUP_ID',
+        "scheduler":"SINGLE",
+        "projectId": '$PROJECT_ID',
+        "testRunName": "Test running '$FILENAME' using '$browser'",
+        "testRunParameters": [
+            {
+            "key":"CALABASH_TAGS","value":"'$1;$browser'"
+            },
+            {
+            "key":"CALABASH_PROFILE","value":"'$file'"
+            }
+            ]
+        }'
 
-# It's time to send the jobs to BitBar
-curl -H 'Content-Type: application/json'  \
- -u $BITBAR_API_KEY \
- https://wikimedia.bitbar.com/cloud/api/v2/runs \
- -d "$BITBAR_CONFIG"
-  
+    # It's time to send the jobs to BitBar
+    curl -H 'Content-Type: application/json'  \
+    -u $BITBAR_API_KEY \
+    https://wikimedia.bitbar.com/cloud/api/v2/runs \
+    -d "$BITBAR_CONFIG"
+    done
 done
