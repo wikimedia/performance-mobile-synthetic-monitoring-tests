@@ -17,7 +17,7 @@ echo "We got $1 and $2 as input"
 # separated by a ;
 
 INPUT=$1
-TYPE_OF_TEST_AND_BROWSER=(${INPUT//;/ })
+TYPE_OF_TEST_AND_BROWSER=(${INPUT//:/ })
 TYPE_OF_TEST=${TYPE_OF_TEST_AND_BROWSER[0]}
 BROWSER=${TYPE_OF_TEST_AND_BROWSER[1]}
 FILE_TO_RUN=$2

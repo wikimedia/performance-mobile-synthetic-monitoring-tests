@@ -53,7 +53,7 @@ for file in tests/$1/*.*; do
         "testRunName": "Test running '$FILENAME' using '$browser'",
         "testRunParameters": [
             {
-            "key":"CALABASH_TAGS","value":"'$1';'$browser'"
+            "key":"CALABASH_TAGS","value":"'$1':'$browser'"
             },
             {
             "key":"CALABASH_PROFILE","value":"'$file'"
