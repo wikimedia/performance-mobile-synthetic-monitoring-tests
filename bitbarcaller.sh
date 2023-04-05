@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# This script loops through our tests and call the BitBar API.
+# It needs to have BITBAR_API_KEY in the environment and be called
+# with one parameter to choose which kind of tests to run (tests 
+# run on different phones).
+
 # You need to have exported the BitBar key to be able to run
 if [[ -z "${BITBAR_API_KEY}" ]]; then
   echo 'Missing env variable BITBAR_API_KEY'
@@ -7,7 +12,7 @@ if [[ -z "${BITBAR_API_KEY}" ]]; then
 fi
 
 # These are settings used by BitBar
-# You can see these in BitBars GUI
+# You can see these in BitBar GUI
 WEBPAGEREPLAY_FRAMEWORK_ID=19
 WEBPAGEREPLAY_PROJECT_ID=204
 SAMSUNG_DEVICE_GROUP_ID=10
@@ -28,7 +33,8 @@ else
 fi
 
 # For all the files that we have, pass them on to
-# the BitBar API
+# the BitBar API. At the moment we run all tests
+# with both Chrome and Firefox
 for file in tests/$1/*.*; do
     [ -e "$file" ] || continue
     BROWSERS=(chrome firefox)

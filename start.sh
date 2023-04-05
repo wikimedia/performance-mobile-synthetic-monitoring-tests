@@ -5,14 +5,17 @@
 # We always install NodeJs and the dependencies 
 # needed to run sitespeed.io
 
+
 ./install/linux/nodejs.sh
 ./install/linux/sitespeed.io.sh
 
 echo "We got $1 and $2 as input"
-
 # We use a hack to pass on parameters
 # CALABASH_TAGS and CALABASH_PROFILE
-# and we sent the type and browser in one
+# The problem is that BitBar only handles two parameters
+# so we use the first one to pass on test typ and browser
+# separated by a ;
+
 INPUT=$1
 TYPE_OF_TEST_AND_BROWSER=(${INPUT//;/ })
 TYPE_OF_TEST=${TYPE_OF_TEST_AND_BROWSER[0]}
