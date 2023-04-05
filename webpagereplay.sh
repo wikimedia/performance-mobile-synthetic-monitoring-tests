@@ -21,7 +21,7 @@ adb shell svc wifi disable
 TEST=webpagereplay
 FILENAME=$(basename -- "$FILE")
 FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"
-POTENTIAL_CONFIG_FILE="config/$TEST/$FILENAME_WITHOUT_EXTENSION.json"
+POTENTIAL_CONFIG_FILE="config/$FILENAME_WITHOUT_EXTENSION.json"
 [[ -f "$POTENTIAL_CONFIG_FILE" ]] && CONFIG_FILE="$POTENTIAL_CONFIG_FILE" || CONFIG_FILE="config/replay.json"
 [[ -f "$CONFIG_FILE" ]] && echo "Using config file $CONFIG_FILE" for $FILE || (echo "Missing config file $CONFIG_FILE for $FILE" && exit 1)
 
