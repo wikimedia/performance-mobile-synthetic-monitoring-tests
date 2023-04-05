@@ -1,5 +1,5 @@
 {
-    "extends": "../secrets.json",
+    "extends": "../../secrets.json",
     "utc": true,
     "gzipHAR": true,
     "html": {
