@@ -1,4 +1,4 @@
-const URL_BASE = 'https://en.wikipedia.org';
+const URL_BASE = 'https://en.m.wikipedia.org';
 
 module.exports = function ( title, description, path, onMainPage ) {
 	return async function ( context, commands ) {
@@ -6,7 +6,7 @@ module.exports = function ( title, description, path, onMainPage ) {
 		commands.meta.setDescription( description );
 
 		// Visit Main_Page and execute onMainPage callback.
-		await commands.navigate( `${URL_BASE}?useformat=desktop` );
+		await commands.navigate( `${URL_BASE}` );
 		await onMainPage(commands);
 		await commands.js.run( 'document.body.innerHTML = ""; document.body.style.backgroundColor = "white";' );
 

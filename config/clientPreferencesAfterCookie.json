@@ -4,7 +4,7 @@
     "multi": true,
     "browsertime": {
       "preWarmServer": false,
-      "iterations": 3,
+      "iterations": 7,
       "connectivity": {
         "alias": "4g"
       }
