@@ -14,10 +14,10 @@ TYPE_OF_TEST=$1
 FILE_TO_RUN=$2
 
 if [ "$TYPE_OF_TEST" = "webpagereplay" ]; then
-    echo "Run WebPageReplay tests"
-    ./webpagereplay.sh $2 
+    echo "Run WebPageReplay tests for $FILE_TO_RUN"
+    ./webpagereplay.sh $FILE_TO_RUN 
 else
-    echo "Run direct tests"
-    ./direct.sh $2
+    echo "Run direct tests for $FILE_TO_RUN"
+    ./direct.sh $FILE_TO_RUN
 fi
 
