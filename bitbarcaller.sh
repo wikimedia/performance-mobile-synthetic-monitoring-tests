@@ -31,6 +31,7 @@ fi
 # the BitBar API
 for file in tests/$1/*.*; do
     [ -e "$file" ] || continue
+    FILENAME=$(basename -- "$file")
     BITBAR_CONFIG='{
     "osType":"ANDROID",
     "files":[
@@ -41,6 +42,7 @@ for file in tests/$1/*.*; do
     "deviceGroupId":'$DEVICE_GROUP_ID',
     "scheduler":"SINGLE",
     "projectId": '$PROJECT_ID',
+    "testRunName": "Test running '$FILENAME'",
     "testRunParameters": [
         {
         "key":"CALABASH_TAGS","value":"'$1'"
