@@ -59,7 +59,8 @@
         "network.socket.forcePort:80=8085;443=8086"
       ],
       "acceptInsecureCerts": true,
-      "disableBrowsertimeExtension": true
+      "disableBrowsertimeExtension": true,
+      "bidihar": true
     }
   }
 }
