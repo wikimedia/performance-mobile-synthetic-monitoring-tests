@@ -1,5 +1,5 @@
 {
-    "extends": "./config/default.json",
+    "extends": "./config/direct.json",
     "slug": "userJourneyClientPreferencesBefore",
     "multi": true,
     "browsertime": {

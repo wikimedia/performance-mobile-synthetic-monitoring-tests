@@ -1,4 +1,4 @@
-const factory = require( './clientPreferencesFactory.cjs' );
+const factory = require( './includes/clientPreferencesFactory.cjs' );
 
 module.exports = factory(
 	'Test before multiple client preferences',

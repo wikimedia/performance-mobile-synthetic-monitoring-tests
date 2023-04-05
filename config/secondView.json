@@ -1,5 +1,5 @@
 {
-    "extends": "./config/default.json",
+    "extends": "./config/direct.json",
     "slug": "warmCache",
     "browsertime": {
       "preURL": "https://en.m.wikipedia.org/wiki/Main_Page",

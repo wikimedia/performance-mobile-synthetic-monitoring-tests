@@ -1,4 +1,4 @@
-const factory = require( './clientPreferencesFactory.cjs' );
+const factory = require( './includes/clientPreferencesFactory.cjs' );
 const PREF_COUNT = 100;
 
 module.exports = factory(
