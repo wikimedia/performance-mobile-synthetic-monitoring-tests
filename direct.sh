@@ -24,4 +24,3 @@ adb shell am force-stop "com.android.chrome"
 adb shell pm clear "com.android.chrome"
 adb shell am force-stop "org.mozilla.firefox"
 adb shell pm clear "org.mozilla.firefox"
-sleep 120
