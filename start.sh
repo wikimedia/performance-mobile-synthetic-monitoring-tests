@@ -14,7 +14,7 @@ echo "We got $1 and $2 as input"
 # CALABASH_TAGS and CALABASH_PROFILE
 # The problem is that BitBar only handles two parameters
 # so we use the first one to pass on test typ and browser
-# separated by a ;
+# separated by a :
 
 INPUT=$1
 TYPE_OF_TEST_AND_BROWSER=(${INPUT//:/ })
