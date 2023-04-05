@@ -14,16 +14,16 @@ adb install  -r firefox.apk
 adb shell svc wifi disable
 
 TEST=webpagereplay
-FILE=$TEST/$1
-FILENAME=$(basename -- "$file")
+FILE=$1
+FILENAME=$(basename -- "$FILE")
 FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"
 POTENTIAL_CONFIG_FILE="config/$TEST/$FILENAME_WITHOUT_EXTENSION.json"
 [[ -f "$POTENTIAL_CONFIG_FILE" ]] && CONFIG_FILE="$POTENTIAL_CONFIG_FILE" || CONFIG_FILE="config/replay.json"
-[[ -f "$CONFIG_FILE" ]] && echo "Using config file $CONFIG_FILE" for $file || (echo "Missing config file $CONFIG_FILE for $file" && exit 1)
+[[ -f "$CONFIG_FILE" ]] && echo "Using config file $CONFIG_FILE" for $FILE || (echo "Missing config file $CONFIG_FILE for $FILE" && exit 1)
 
 BROWSERS=(chrome firefox)
 for browser in "${BROWSERS[@]}" ; do
-    ANDROID=true ./webpagereplay/replay.sh --config ./$CONFIG_FILE $file -b $browser
+    ANDROID=true ./webpagereplay/replay.sh --config ./$CONFIG_FILE $FILE -b $browser
     adb shell am force-stop "com.android.chrome"
     adb shell pm clear "com.android.chrome"
     adb shell am force-stop "org.mozilla.firefox"
