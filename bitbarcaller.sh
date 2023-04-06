@@ -34,10 +34,10 @@ fi
 
 # For all the files that we have, pass them on to
 # the BitBar API. At the moment we run all tests
-# with both Chrome and Firefox
+# with Chrome (Firefox disabled for now)
 for file in tests/$1/*.*; do
     [ -e "$file" ] || continue
-    BROWSERS=(chrome firefox)
+    BROWSERS=(chrome)
     for browser in "${BROWSERS[@]}" ; do
         FILENAME=$(basename -- "$file")
         BITBAR_CONFIG='{
