@@ -4,12 +4,6 @@
 FILE=$1
 BROWSER=$2
 
-# arm64 works fine using A51 and armeabi on Moto G5.
-if [ "$BROWSER" = "firefox" ]; then
-    curl -L https://github.com/mozilla-mobile/firefox-android/releases/download/fenix-v111.0/fenix-111.0-armeabi-v7a.apk --output firefox.apk
-    adb install  -r firefox.apk
-fi
-
 TEST=direct
 FILENAME=$(basename -- "$FILE")
 FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"

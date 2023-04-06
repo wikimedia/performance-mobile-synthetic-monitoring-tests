@@ -6,21 +6,18 @@
 # needed to run sitespeed.io
 
 
-./install/linux/nodejs.sh
-./install/linux/sitespeed.io.sh
+./install/linux/extras.sh
 
-echo "We got $1 and $2 as input"
+echo "We got $1 , $2 and $3 as input"
 # We use a hack to pass on parameters
 # CALABASH_TAGS and CALABASH_PROFILE
 # The problem is that BitBar only handles two parameters
 # so we use the first one to pass on test typ and browser
 # separated by a :
 
-INPUT=$1
-TYPE_OF_TEST_AND_BROWSER=(${INPUT//:/ })
-TYPE_OF_TEST=${TYPE_OF_TEST_AND_BROWSER[0]}
-BROWSER=${TYPE_OF_TEST_AND_BROWSER[1]}
-FILE_TO_RUN=$2
+TYPE_OF_TEST=$1
+BROWSER=$2
+FILE_TO_RUN=$3
 
 if [ "$TYPE_OF_TEST" = "webpagereplay" ]; then
     echo "Run WebPageReplay tests for $FILE_TO_RUN"

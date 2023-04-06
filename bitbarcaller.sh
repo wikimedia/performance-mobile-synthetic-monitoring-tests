@@ -37,7 +37,7 @@ fi
 # with Chrome (Firefox disabled for now)
 for file in tests/$1/*.*; do
     [ -e "$file" ] || continue
-    BROWSERS=(chrome)
+    BROWSERS=(chrome firefox)
     for browser in "${BROWSERS[@]}" ; do
         FILENAME=$(basename -- "$file")
         BITBAR_CONFIG='{
@@ -53,10 +53,13 @@ for file in tests/$1/*.*; do
         "testRunName": "Test running '$FILENAME' using '$browser'",
         "testRunParameters": [
             {
-            "key":"CALABASH_TAGS","value":"'$1':'$browser'"
+            "key":"PARAM1","value":"'$1'"
             },
             {
-            "key":"CALABASH_PROFILE","value":"'$file'"
+            "key":"PARAM2","value":"'$browser'"
+            },
+            {
+            "key":"PARAM3","value":"'$file'"
             }
             ]
         }'

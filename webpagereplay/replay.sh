@@ -8,7 +8,7 @@ BROWSERTIME=sitespeed.io-wpr
 SITESPEEDIO=sitespeed.io
 
 # WebPageReplay setup
-WPR_BINARY=./webpagereplay/wpr
+WPR_BINARY=~/wpr
 WPR_CERT_FILE=./webpagereplay/wpr_cert.pem
 WPR_KEY_FILE=./webpagereplay/wpr_key.pem
 WPR_SCRIPTS=./webpagereplay/deterministic.js
