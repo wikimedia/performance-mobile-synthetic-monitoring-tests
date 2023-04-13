@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PYTHON=/usr/local/bin/python3
+
 # Run tests directly against Wikipedia
 FILE=$1
 BROWSER=$2

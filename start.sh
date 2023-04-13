@@ -15,10 +15,6 @@ echo "We got $1 , $2 and $3 as input"
 # so we use the first one to pass on test typ and browser
 # separated by a :
 
-nodejs --version
-python3 --version
-echo $PYTHON
-
 TYPE_OF_TEST=$1
 BROWSER=$2
 FILE_TO_RUN=$3
