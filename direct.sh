@@ -4,6 +4,8 @@
 FILE=$1
 BROWSER=$2
 
+export PYTHON=/usr/local/bin/python3
+
 TEST=direct
 FILENAME=$(basename -- "$FILE")
 FILENAME_WITHOUT_EXTENSION="${FILENAME%.*}"

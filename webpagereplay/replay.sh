@@ -1,6 +1,8 @@
 #!/bin/bash
 set -eu
 
+export PYTHON=/usr/local/bin/python3
+
 ## Script to run your Android device against WebPageReplay
 
 # You need to install sitespeed.io globally: npm install sitespeed.io -g
