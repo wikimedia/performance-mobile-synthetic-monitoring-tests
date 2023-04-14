@@ -1,6 +1,8 @@
 #!/bin/bash
 set -eu
 
+# Python3 is installed in two locations in the container
+# make sure we use the correct one in Visual Metrics
 export PYTHON=/usr/local/bin/python3
 
 ## Script to run your Android device against WebPageReplay
