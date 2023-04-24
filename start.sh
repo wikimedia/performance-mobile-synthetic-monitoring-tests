@@ -2,19 +2,15 @@
 
 # This is the main hook that is run on startup on 
 # BitBar. 
-# We always install NodeJs and the dependencies 
-# needed to run sitespeed.io
 
-
+# All dependencies is installed in the Docker container
+# But if we need to override something we can do it with
+# extras.sh
 ./install/linux/extras.sh
 
 echo "We got $1 , $2 and $3 as input"
 # We use a hack to pass on parameters
-# CALABASH_TAGS and CALABASH_PROFILE
-# The problem is that BitBar only handles two parameters
-# so we use the first one to pass on test typ and browser
-# separated by a :
-
+# PARAM1, PARAM2 and PARAM3 in the BitBar API
 TYPE_OF_TEST=$1
 BROWSER=$2
 FILE_TO_RUN=$3
@@ -26,4 +22,3 @@ else
     echo "Run direct tests for $FILE_TO_RUN"
     ./direct.sh $FILE_TO_RUN $BROWSER
 fi
-
