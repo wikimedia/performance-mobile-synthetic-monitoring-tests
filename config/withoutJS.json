@@ -1,0 +1,11 @@
+{
+    "extends": "./config/direct.json",
+
+    "slug": "experiments",
+    "browsertime": {
+    "connectivity": {
+      "alias": "4g"
+    },
+    "androidPretestPressHomeButton": true
+  }
+}
