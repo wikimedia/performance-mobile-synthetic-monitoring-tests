@@ -1,6 +1,6 @@
 {
     "extends": "./config/direct.json",
-
+    "multi": true,
     "slug": "experiments",
     "browsertime": {
     "connectivity": {
