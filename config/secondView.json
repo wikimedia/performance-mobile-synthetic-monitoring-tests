@@ -2,7 +2,7 @@
     "extends": "./config/direct.json",
     "slug": "warmCache",
     "browsertime": {
-      "preURL": "https://en.m.wikipedia.org/wiki/Main_Page",
+      "preURL": "https://vi.m.wikipedia.org/wiki/Trang_Chính",
       "connectivity": {
         "alias": "4g"
       }
