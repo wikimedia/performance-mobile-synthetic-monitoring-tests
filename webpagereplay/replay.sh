@@ -1,10 +1,6 @@
 #!/bin/bash
 set -eu
 
-# Python3 is installed in two locations in the container
-# make sure we use the correct one in Visual Metrics
-export PYTHON=/usr/local/bin/python3
-
 ## Script to run your Android device against WebPageReplay
 
 # You need to install sitespeed.io globally: npm install sitespeed.io -g
@@ -12,7 +8,7 @@ BROWSERTIME=sitespeed.io-wpr
 SITESPEEDIO=sitespeed.io
 
 # WebPageReplay setup
-WPR_BINARY=~/wpr
+WPR_BINARY=wpr
 WPR_CERT_FILE=./webpagereplay/wpr_cert.pem
 WPR_KEY_FILE=./webpagereplay/wpr_key.pem
 WPR_SCRIPTS=./webpagereplay/deterministic.js

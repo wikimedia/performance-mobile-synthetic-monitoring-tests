@@ -1,5 +1,4 @@
 {
-  "extends": "../secrets.json",
   "slug": "webpagereplay",
   "utc": true,
   "gzipHAR": true,
@@ -16,12 +15,8 @@
       "coach"
     ]
   },
-  "graphite": {
-    "messages": ["pageSummary", "run"]
-  },
   "android": true,
   "replay": true,
-  "copyLatestFilesToBaseGraphiteNamespace": true,
   "browsertime": {
     "cpu": true,
     "limitedRunData": true,
@@ -30,7 +25,9 @@
     "video": true,
     "visualMetrics": true,
     "visualElements": true,
-    "androidRooted": true,
+    "android": {
+        "rooted": true
+      },
     "connectivity": {
       "engine": "throttle",
       "throttle": {
@@ -40,6 +37,7 @@
       "alias:": "120rtt",
       "rtt": 120
     },
+    "pageCompleteCheckNetworkIdle": true,
     "chrome": {
       "traceCategory": ["disabled-by-default-v8.cpu_profiler"],
       "cleanUserDataDir": true,
@@ -59,8 +57,7 @@
         "network.socket.forcePort:80=8085;443=8086"
       ],
       "acceptInsecureCerts": true,
-      "disableBrowsertimeExtension": true,
-      "bidihar": true
+      "disableBrowsertimeExtension": true
     }
   }
 }
