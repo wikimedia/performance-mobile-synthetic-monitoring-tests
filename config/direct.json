@@ -1,5 +1,4 @@
 {
-    "extends": "../../secrets.json",
     "utc": true,
     "gzipHAR": true,
     "html": {
@@ -15,10 +14,6 @@
         "coach"
       ]
     },
-    "graphite": {
-      "messages": ["pageSummary", "run"]
-    },
-    "copyLatestFilesToBaseGraphiteNamespace": true,
     "android": true,
     "browsertime": {
       "cpu": true,
@@ -31,9 +26,15 @@
       "cacheClearRaw": true,
       "video": true,
       "visualMetrics": true,
-      "visualMetricsPortable": true,
-      "androidRooted": true,
-      "androidVerifyNetwork": true,
+      "android": {
+        "gnirehtet": true,
+        "rooted": true
+      },
+      "connectivity": {
+        "engine": "throttle",
+        "profile": "4g"
+      },
+      "pageCompleteCheckNetworkIdle": true,
       "chrome": {
         "traceCategory": ["disabled-by-default-v8.cpu_profiler"],
         "collectConsoleLog": true,

@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Python3 is installed in two locations in the container
-# make sure we use the correct one in Visual Metrics
-export PYTHON=/usr/local/bin/python3
-
 # Run tests directly against Wikipedia
 FILE=$1
 BROWSER=$2
