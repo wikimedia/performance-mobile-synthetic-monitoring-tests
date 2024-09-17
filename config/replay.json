@@ -21,7 +21,7 @@
     "cpu": true,
     "limitedRunData": true,
     "timeToSettle": 5000,
-    "iterations": 11,
+    "iterations": 21,
     "video": true,
     "visualMetrics": true,
     "visualElements": true,
@@ -34,8 +34,8 @@
         "localhost": true
       },
       "profile": "custom",
-      "alias:": "120rtt",
-      "rtt": 120
+      "alias:": "100rtt",
+      "rtt": 100
     },
     "pageCompleteCheckNetworkIdle": true,
     "chrome": {
@@ -59,5 +59,8 @@
       "acceptInsecureCerts": true,
       "disableBrowsertimeExtension": true
     }
+  },
+  "compare": {
+    "baselinePath": "/baseline"
   }
 }
